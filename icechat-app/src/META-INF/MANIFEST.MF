@@ -1,0 +1,2 @@
+Implementation-Version: 0.9-beta
+Implementation-Vendor: Emerald Icemoon

@@ -1,0 +1,16 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Icechat
+Name[en_GB]=Icechat
+GenericName=Planet Forever Chat
+GenericName[en_GB]=Planet Forever Chat
+Comment=Planet Forever Chat
+Icon=icechat.png
+TryExec=icechat
+Exec=icechat
+Terminal=false
+# Categorie entry according to version 1.0 of
+# http://www.freedesktop.org/wiki/Specifications/menu-spec
+Categories=GNOME;Network;
+Encoding=UTF-8
