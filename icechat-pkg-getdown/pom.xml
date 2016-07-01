@@ -85,7 +85,9 @@
 						<goals>
 							<goal>updates</goal>
 							<goal>stub</goal>
+							<!--
 							<goal>applet</goal>
+							-->
 						</goals>
 						<configuration>
 							<appbase>${chat.home}/getdown</appbase>
@@ -104,10 +106,10 @@
 							<ui>
 								<name>Icechat</name>
 								<icons>
-									<icon>${basedir}/../icechat-group/src/main/installers/images/icechat.png</icon>
+									<icon>${basedir}/../src/main/installers/images/icechat.png</icon>
 								</icons>
-								<progressImage>${basedir}/../icechat-group/src/main/installers/images/progress.png</progressImage>
-								<backgroundImage>${basedir}/../icechat-group/src/main/installers/images/splash.png</backgroundImage>
+								<progressImage>${basedir}/../src/main/installers/images/progress.png</progressImage>
+								<backgroundImage>${basedir}/../src/main/installers/images/splash.png</backgroundImage>
 								<progress>80, 244, 196, 11</progress>
 								<progressText>FFFFFF</progressText>
 								<statusText>FFFFFF</statusText>
@@ -115,6 +117,7 @@
 								<textShadow>111111</textShadow>
 							</ui>
 
+							<!--
 							<sign>
 								<keystore>${signingFiles}/${certificate.keystore}</keystore>
 								<keypass>${certificate.password}</keypass>
@@ -123,6 +126,7 @@
 								<alias>${certificate.alias}</alias>
 								<verify>true</verify>
 							</sign>
+							-->
 
 						</configuration>
 					</execution>
@@ -184,7 +188,7 @@
 						</data>
 						<data>
 							<type>directory</type>
-							<src>${basedir}/../icechat-group/src/main/installers/scripts</src>
+							<src>${basedir}/../src/main/installers/scripts</src>
 							<includes>*</includes>
 							<mapper>
 								<type>perm</type>
@@ -197,7 +201,7 @@
 						</data>
 						<data>
 							<type>directory</type>
-							<src>${basedir}/../icechat-group/src/main/installers/images</src>
+							<src>${basedir}/../src/main/installers/images</src>
 							<includes>icechat.png</includes>
 							<mapper>
 								<type>perm</type>
@@ -210,7 +214,7 @@
 						</data>
 						<data>
 							<type>directory</type>
-							<src>${basedir}/../icechat-group/src/main/installers/applications</src>
+							<src>${basedir}/../src/main/installers/applications</src>
 							<includes>*</includes>
 							<mapper>
 								<type>perm</type>
@@ -264,7 +268,7 @@
 							<directoryIncluded>false</directoryIncluded>
 							<sources>
 								<source>
-									<location>${basedir}/../icechat-group/src/main/installers/scripts/icechat</location>
+									<location>${basedir}/../src/main/installers/scripts/icechat</location>
 								</source>
 							</sources>
 						</mapping>
@@ -276,7 +280,7 @@
 							<directoryIncluded>false</directoryIncluded>
 							<sources>
 								<source>
-									<location>${basedir}/../icechat-group/src/main/installers/applications/icechat.desktop</location>
+									<location>${basedir}/../src/main/installers/applications/icechat.desktop</location>
 								</source>
 							</sources>
 						</mapping>
@@ -288,7 +292,7 @@
 							<directoryIncluded>false</directoryIncluded>
 							<sources>
 								<source>
-									<location>${basedir}/../icechat-group/src/main/installers/images/icechat.png</location>
+									<location>${basedir}/../src/main/installers/images/icechat.png</location>
 								</source>
 							</sources>
 						</mapping>
@@ -363,7 +367,7 @@
 			</plugin>
 
 			<!-- And now OS X -->
-
+			<!--
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>osxappbundle-maven-plugin</artifactId>
@@ -396,6 +400,7 @@
 					</execution>
 				</executions>
 			</plugin>
+			-->
 
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
@@ -410,7 +415,7 @@
 						</goals>
 						<configuration>
 							<fromDir>target</fromDir>
-							<includes>getdown/**/*,getdown-applet/**/*,icechat-app.zip,icechat.deb,SetupIcechat.exe,icechat.noarch.rpm</includes>
+							<includes>getdown/**/*,icechat-app.zip,icechat.deb,SetupIcechat.exe,icechat.noarch.rpm</includes>
 							<url>scp://${chat.username}@${chat.host}${chat.dir}</url>
 						</configuration>
 					</execution>
